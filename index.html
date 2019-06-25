@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class='trans'>
+            <div>
+                <h1>SANO SCRIPTUM</h1>
+                <p>Here you may easily edit your texts and find out more about some if its properties.</p>
+            </div>     
+        </div>      
+    </header>
+    <section>
+        <h2>The editor allows you to:</h2>
+        <div class="characteristics">
+            <h3>Remove specific words</h3>
+            <p>Copy your text into the left field. Type the words you want to be removed in the field immediately below the text. Click 'Edit' button. You're done!</p>
+            <h3>Replace some words.</h3>
+            <p>First, you need to type a word or words you want to be replaced. Then type a word that should replace previously chosen words into the following field. Click the button and that's it!</p>
+            <h3>Find out the total amount of words before and afer editing.</h3>
+            <p>There is almost nothing you have to do. Just paste your text and you will see the details.</p>
+            <h3>Find out the amount of sentences.</h3>
+            <p>Umm, just paste your text.</p>
+            <h3>See how many times a word was used in your text.</h3>
+            <p>Type the word you are interested in and there you have it. Providing you have pasted your text beforehand.</p>
+        </div>
+    </section>
+    <div class="texts">
+        <div class="text-1">
+            <label for="input-text">Your text here: </label><br>
+            <textarea name="" id="input-text" cols="30" rows="10"></textarea>
+            <p>Words: <span id="wordsAmount"></span>  Sentences: <span id="sentencesAmount"></span></p>
+        </div>
+        <button class="convert">Edit text</button>
+        <div class="text-2">
+            <label for="output-text">Here is the result text:</label><br>
+            <textarea name="" id="output-text" cols="30" rows="10"></textarea>
+            <p>Words: <span id="wordsAmountRes"></span></p>
+        </div>      
+    </div>
+     
+    <div class="options">
+        <label for="options-delete">Words to remove:</label>
+        <input type="text" id="options-delete" placeholder=" введите слова через пробел"><br>
+        <label for="options-replace">Words to replace:</label>
+        <input type="text" id="options-replace" placeholder=" введите слова через пробел">
+        <label for="options-replace__new">Replacement:</label>
+        <input type="text" id="options-replace__new" placeholder="новое слово"> <button id="replace">Replace</button> <br>
+        <label for="options-freq">The word:</label>
+        <input type="text" id="options-freq" placeholder="">
+        <label for="options-freq__times">appears: <span id="options-freq__times"></span> times</label>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

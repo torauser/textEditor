@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: rgba(245, 244, 241, 0.8);
+}
+header {
+    height: 100vh;
+    text-align: center;
+    background: url('./background.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.trans {
+    background: rgba(245, 244, 241, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section {
+    padding: 40px;
+    height: auto;
+}
+section h2 {
+    margin-left: 7%;
+    font-size: 36px;
+    max-width: 35%;
+}
+.characteristics {
+    position: relative;
+    margin-left: 10%;
+    margin-top: 50px;
+    opacity: 0;
+}
+.characteristics p {
+    margin: 10px 0;
+    width: 75%;
+}
+
+.animation {
+    animation-name: effect;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes effect {
+    0%   {top:-100px; opacity: 0;}
+    100% {top:0; opacity: 1;}
+  }
+
+.texts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.text-1 p, .text-2 p {
+    font-size: 12px;
+}
+
+#input-text, #output-text {
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    margin: 5px 0;
+    box-shadow: 0px 0px 2px grey inset;
+}
+#input-text:focus, #output-text:focus {
+    box-shadow: 0px 0px 3px 1px lightskyblue;
+}
+
+.convert, #replace {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #c1a495;
+    background-image: linear-gradient(110deg, #dbc4a0, #f7eab7, #dbc4a0);
+    box-shadow: 0px 0px 3px lightcoral;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.convert:active, #replace:active {
+    box-shadow: 0px 0px 5px grey inset;
+    transition: box-shadow 0.05s;
+    background-image: linear-gradient(-110deg, #dbc4a0, #f7eab7, #dbc4a0);
+}
+
+.options {
+    padding: 30px;
+    margin-bottom: 100px;
+}
+#options-delete, #options-replace, #options-freq, #options-replace__new {
+    margin: 10px;
+    width: 250px;
+    outline: none;
+    border: 1px solid #c1a495;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 2px grey inset;
+}
+#options-delete:focus {
+    box-shadow: 0px 0px 3px 0px red ;
+    transition: box-shadow 0.3s;
+    border: none;
+}
